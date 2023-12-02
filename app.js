@@ -1,5 +1,3 @@
-const professionInput = document.getElementById('profession')
-
 const app = Vue.createApp({
     data(){
         return{
