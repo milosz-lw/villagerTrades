@@ -1,21 +1,21 @@
 const app = Vue.createApp({
     data(){
         return{
-            currentProfession: 'a',
+            currentProfession: 'Armorer',
             professions:[
-                {name: 'armorer'},
-                {name: 'butcher'},
-                {name: 'cartographer'},
-                {name: 'cleric'},
-                {name: 'farmer'},
-                {name: 'fisherman'},
-                {name: 'fletcher'},
-                {name: 'leatherworker'},
-                {name: 'librarian'},
-                {name: 'mason'},
-                {name: 'shepherd'},
-                {name: 'toolsmith'},
-                {name: 'weaponsmith'}
+                {name: 'Armorer'},
+                {name: 'Butcher'},
+                {name: 'Cartographer'},
+                {name: 'Cleric'},
+                {name: 'Farmer'},
+                {name: 'Fisherman'},
+                {name: 'Fletcher'},
+                {name: 'Leatherworker'},
+                {name: 'Librarian'},
+                {name: 'Mason'},
+                {name: 'Shepherd'},
+                {name: 'Toolsmith'},
+                {name: 'Weaponsmith'}
             ]
         }
     },

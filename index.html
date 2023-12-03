@@ -9,12 +9,14 @@
 </head>
 <body>
     <div id="app">
-        <form>
+        <div id="select-container">
+            <label for="profession">Choose villager's profession: </label>
             <select name="profession" id="profession" @change="changeProfession">
-                <option v-for="profession in professions" v-bind:value="{ text: profession.name }">{{ profession.name }}</option>
+                <option v-for="profession in professions" :value="{ text: profession.name }">{{ profession.name }}</option>
             </select>
+            <br>
             <h1>{{ currentProfession }}</h1>
-        </form>
+        </div>
         <div id="trades">
             <div class="trade-box">
             

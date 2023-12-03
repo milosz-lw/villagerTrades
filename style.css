@@ -1,7 +1,13 @@
+@font-face{
+    font-family: 'Minecraft';
+    src: url('font/minecraft_font.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Minecraft';
 }
 
 body{
@@ -11,6 +17,9 @@ body{
 }
 
 #app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 80%;
     margin-top: 100px;
 }
@@ -18,12 +27,21 @@ body{
 #trades{
     display: flex;
     width: 100%;
+    justify-content: space-between;
 }
 
 .trade-box{
-    width: 50%;
+    width: 48%;
     height: 100px;
     background: #ccc;
     display: flex;
     flex-direction: column;
+}
+
+#select-container{
+    text-align: center;    
+}
+
+select{
+    font-size: 1.5rem;
 }
