@@ -42,6 +42,15 @@ body{
     text-align: center;    
 }
 
-select{
+select, label{
     font-size: 1.5rem;
+}
+
+select{
+    border: none;
+    border-bottom: #ccc solid 2px;
+}
+
+select:focus{
+    outline: none;
 }
