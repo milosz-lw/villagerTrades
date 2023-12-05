@@ -19,10 +19,14 @@
         </div>
         <div id="trades">
             <div class="trade-box">
-            
+                <div v-for="trade in professions[currentProfessionIndex].products">
+                    <img :src="'IMG/' + trade.wantedItem.replaceAll(' ', '_') + '.png'" class="wanted-item-img">
+                </div>
             </div>
             <div class="trade-box">
-                
+                <div v-for="trade in professions[currentProfessionIndex].products">
+                    <img :src="'IMG/' + trade.name.replaceAll(' ', '_') + '.png'" class="wanted-item-img">
+                </div>
             </div>
         </div>
     </div>
