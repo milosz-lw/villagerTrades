@@ -20,7 +20,9 @@
         <div id="trades">
             <div class="trade-box">
                 <div v-for="trade in professions[currentProfessionIndex].products">
-                    <img :src="'IMG/' + trade.wantedItem.replaceAll(' ', '_') + '.png'" class="wanted-item-img">
+                    <div v-for="wantedItem in trade.wantedItems" v-if="trade.selected">
+                        <img :src="" alt="aaa">
+                    </div>
                 </div>
             </div>
             <div class="trade-box">
