@@ -14,6 +14,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #111;
+    color: white;
 }
 
 #app{
@@ -28,14 +30,35 @@ body{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 5%;
+}
+
+#trades > img{
+    margin: auto 0;
 }
 
 .trade-box{
-    width: 48%;
-    height: 100px;
-    background: #ccc;
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 48%;
+}
+
+.trade-box > div{
+    width: 20%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(IMG/eq.png);
+    background-size: cover;
+}
+
+.trade-box > div:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 #select-container{
@@ -53,4 +76,20 @@ select{
 
 select:focus{
     outline: none;
+}
+
+.wanted-item-img{
+    width: 75%;
+}
+
+#price{
+    position: absolute;
+    bottom: 3%;
+    right: 7%;
+}
+
+@media screen and (max-width: 800px){
+    .trade-box > div{
+        width: calc(100%/3);
+    }
 }
