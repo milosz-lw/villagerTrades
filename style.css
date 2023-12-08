@@ -1,13 +1,10 @@
-@font-face{
-    font-family: 'Minecraft';
-    src: url('font/minecraft_font.ttf');
-}
+@import url('https://fonts.cdnfonts.com/css/minecraft-3');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Minecraft';
+    font-family: 'Minecraft', sans-serif;
 }
 
 body{
@@ -82,14 +79,19 @@ select:focus{
     width: 75%;
 }
 
-#price{
+.price{
     position: absolute;
-    bottom: 3%;
-    right: 7%;
+    bottom: 5%;
+    right: 8%;
+    font-size: 2rem;
 }
 
 @media screen and (max-width: 800px){
     .trade-box > div{
         width: calc(100%/3);
     }
+}
+
+.item-container{
+    position: relative;
 }
