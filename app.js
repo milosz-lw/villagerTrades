@@ -6,54 +6,54 @@ const app = Vue.createApp({
             currentProductIndex: 2,
             professions:[
                 {name: 'Armorer', products:[
-                    {name: 'Emerald', wantedItems:[
+                    {name: 'Emerald', selected: true, wantedItems:[
                         {name: 'Coal', price: 15},
                         {name: 'Iron Ingot', price: 4},
                         {name: 'Lava Bucket', price: 1},
                         {name: 'Diamond', price: 1},
                     ]},
-                    {name: 'Iron Leggings', wantedItems:[
+                    {name: 'Iron Leggings', selected: false, wantedItems:[
                         {name: 'Emerald', price: 7}
                     ]},
-                    {name: 'Iron Boots', wantedItems:[
+                    {name: 'Iron Boots', selected: false, wantedItems:[
                         {name: 'Emerald', price: 7}
                     ]},
-                    {name: 'Iron Helmet', wantedItems:[
+                    {name: 'Iron Helmet', selected: false, wantedItems:[
                         {name: 'Emerald', price: 5}
                     ]},
-                    {name: 'Iron Chestplate', wantedItems:[
+                    {name: 'Iron Chestplate', selected: false, wantedItems:[
                         {name: 'Emerald', price: 9}
                     ]},
-                    {name: 'Bell', wantedItems:[
+                    {name: 'Bell', selected: false, wantedItems:[
                         {name: 'Emerald', price: 36}
                     ]},
-                    {name: 'Chainmail Boots', wantedItems:[
+                    {name: 'Chainmail Boots', selected: false, wantedItems:[
                         {name: 'Emerald', price: 1}
                     ]},
-                    {name: 'Chainmail Leggings', wantedItems:[
+                    {name: 'Chainmail Leggings', selected: false, wantedItems:[
                         {name: 'Emerald', price: 3}
                     ]},
-                    {name: 'Chainmail Helmet', wantedItems:[
+                    {name: 'Chainmail Helmet', selected: false, wantedItems:[
                         {name: 'Emerald', price: 1}
                     ]},
-                    {name: 'Chainmail Chestplate', wantedItems:[
+                    {name: 'Chainmail Chestplate', selected: false, wantedItems:[
                         {name: 'Emerald', price: 4}
                     ]},
-                    {name: 'Enchanted Diamond Leggings', wantedItems:[
+                    {name: 'Enchanted Diamond Leggings', selected: false, wantedItems:[
                         {name: 'Emerald', minPrice: 19, maxPrice: 33}
                     ]},
-                    {name: 'Enchanted Diamond Boots', wantedItems:[
+                    {name: 'Enchanted Diamond Boots', selected: false, wantedItems:[
                         {name: 'Emerald', minPrice: 13, maxPrice: 27}
                     ]},
-                    {name: 'Enchanted Diamond Helmet', wantedItems:[
+                    {name: 'Enchanted Diamond Helmet', selected: false, wantedItems:[
                         {name: 'Emerald', minPrice: 13, maxPrice: 27}
                     ]},
-                    {name: 'Enchanted Diamond Chestplate', wantedItems:[
+                    {name: 'Enchanted Diamond Chestplate', selected: false, wantedItems:[
                         {name: 'Emerald', minPrice: 21, maxPrice: 35}
                     ]}
                 ]},
                 {name: 'Butcher', products:[
-                    {name: 'Emerald', wantedItems:[
+                    {name: 'Emerald', selected: false, wantedItems:[
                         {name: 'Raw Chicken', price: 14},
                         {name: 'Raw Porkchop', price: 7},
                         {name: 'Raw Rabbit', price: 4},
@@ -63,66 +63,18 @@ const app = Vue.createApp({
                         {name: 'Dried Kelp Block', price: 10},
                         {name: 'Sweet Berries', price: 10},
                     ]},
-                    {name: 'Rabbit Stew', wantedItems:[
+                    {name: 'Rabbit Stew', selected: false, wantedItems:[
                         {name: 'Emerald', price: 1}
                     ]},
-                    {name: 'Cooked Porkchop', wantedItems:[
+                    {name: 'Cooked Porkchop', selected: false, wantedItems:[
                         {name: 'Emerald', price: 1}
                     ]},
-                    {name: 'Cooked Chicken', wantedItems:[
+                    {name: 'Cooked Chicken', selected: false, wantedItems:[
                         {name: 'Emerald', price: 1}
                     ]}
                 ]},
-                {name: 'Cartographer', products:[
-                    {name: 'Emerald', wantedItems:[
-                        {name: 'Paper', price: 24},
-                        {name: 'Glass Pane', price: 11},
-                        {name: 'Compass', price: 1},
-                    ]},
-                    {name: 'Empty Map', wantedItems:[
-                        {name: 'Emerald', price: 7}
-                    ]},
-                    {name: 'Ocean Explorer Map', wantedItems:[
-                        {name: 'Emerald', price: 13}
-                    ]},
-                    {name: 'Woodland Explorer Map', wantedItems:[
-                        {name: 'Emerald', price: 14}
-                    ]},
-                    {name: 'Item Frame', wantedItems:[
-                        {name: 'Emerald', price: 7}
-                    ]},
-                    {name: 'Banner', wantedItems:[
-                        {name: 'Emerald', price: 3}
-                    ]},
-                    {name: 'Globe Banner Pattern', wantedItems:[
-                        {name: 'Emerald', price: 8}
-                    ]},
-                ]},
-                {name: 'Cleric', products:[
-                    {name: 'Emerald', wantedItems:[
-                        {name: 'Rotten Flesh', price: 32},
-                        {name: 'Gold Ingot', price: 3},
-                        {name: "Rabbit's Foot", price: 2},
-                        {name: 'Scute', price: 4},
-                        {name: 'Glass Bottle', price: 9},
-                        {name: 'Nether Wart', price: 22},
-                    ]},
-                    {name: 'Redstone Dust', quantity: 2, wantedItems:[
-                        {name: 'Emerald', price: 1}
-                    ]},
-                    {name: 'Lapis Lazuli', wantedItems:[
-                        {name: 'Emerald', price: 1}
-                    ]},
-                    {name: 'Glowstone', wantedItems:[
-                        {name: 'Emerald', price: 4}
-                    ]},
-                    {name: 'Ender Pearl', wantedItems:[
-                        {name: 'Emerald', price: 5}
-                    ]},
-                    {name: "Bottle o'Enchanting", wantedItems:[
-                        {name: 'Emerald', price: 3}
-                    ]},
-                ]},
+                {name: 'Cartographer'},
+                {name: 'Cleric'},
                 {name: 'Farmer'},
                 {name: 'Fisherman'},
                 {name: 'Fletcher'},
