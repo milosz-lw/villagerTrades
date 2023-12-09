@@ -19,15 +19,16 @@
         </div>
         <div id="trades">
             <div class="trade-box">
-                <div v-for="wantedItem in professions[currentProfessionIndex].products[currentProductIndex].wantedItems" style="position:relative;">
+                <div v-for="wantedItem in professions[currentProfessionIndex].products[currentProductIndex].wantedItems" class="item-container">
                     <img :src="'IMG/' + wantedItem.name.replaceAll(' ', '_') + '.png'" class="wanted-item-img">
-                    <p id="price">{{ wantedItem.price }}</p>
+                    <p class="price">{{ wantedItem.price }}</p>
                 </div>
             </div>
             <img src="IMG/gui_arrow.png">
             <div class="trade-box">
-                <div v-for="(trade, index) in professions[currentProfessionIndex].products" @click="changeProduct(index)">
+                <div v-for="(trade, index) in professions[currentProfessionIndex].products" @click="changeProduct(index)" class="item-container">
                     <img :src="'IMG/' + trade.name.replaceAll(' ', '_') + '.png'" class="wanted-item-img">
+                    <p v-if="trade.quantity" class="price">{{ trade.quantity }}</p>
                 </div>
             </div>
         </div>
