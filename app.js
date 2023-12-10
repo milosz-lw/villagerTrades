@@ -3,7 +3,7 @@ const app = Vue.createApp({
         return{
             currentProfession: 'Armorer',
             currentProfessionIndex: 0,
-            currentProductIndex: 2,
+            currentProductIndex: null,
             professions:[
                 {name: 'Armorer', products:[
                     {name: 'Emerald', wantedItems:[
@@ -123,7 +123,40 @@ const app = Vue.createApp({
                         {name: 'Emerald', price: 3}
                     ]},
                 ]},
-                {name: 'Farmer'},
+                {name: 'Farmer', products:[
+                    {name: 'Emerald', wantedItems:[
+                        {name: 'Wheat', price: 20},
+                        {name: 'Potato', price: 26},
+                        {name: 'Carrot', price: 22},
+                        {name: 'Beetroot', price: 15},
+                        {name: 'Pumpkin', price: 6},
+                        {name: 'Melon', price: 4},
+                    ]},
+                    {name: 'Bread', quantity: 6, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Pumpkin Pie', quantity: 4, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Apple', quantity: 4, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Cookie', quantity: 18, wantedItems:[
+                        {name: 'Emerald', price: 3}
+                    ]},
+                    {name: 'Cake', wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Suspicious Stew', wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Golden Carrot', quantity: 3, wantedItems:[
+                        {name: 'Emerald', price: 3}
+                    ]},
+                    {name: 'Glistering Melon Slice', quantity: 6, wantedItems:[
+                        {name: 'Emerald', price: 4}
+                    ]}
+                ]},
                 {name: 'Fisherman'},
                 {name: 'Fletcher'},
                 {name: 'Leatherworker'},
@@ -137,11 +170,12 @@ const app = Vue.createApp({
     },
     methods:{
         changeProfession(e){
-            this.currentProfession = e.target.options[e.target.options.selectedIndex].text
+            this.currentProductIndex = null
             this.currentProfessionIndex = e.target.options.selectedIndex
+            this.currentProfession = e.target.options[e.target.options.selectedIndex].text
         },
         changeProduct(index){
-            this.currentProductIndex = index;
+            this.currentProductIndex = index
         }
     }
 })

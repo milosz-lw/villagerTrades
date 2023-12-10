@@ -86,12 +86,22 @@ select:focus{
     font-size: 2rem;
 }
 
-@media screen and (max-width: 800px){
-    .trade-box > div{
-        width: calc(100%/3);
-    }
+.price-range{
+    font-size: 1.3rem;
 }
 
 .item-container{
     position: relative;
 }
+
+@media screen and (max-width: 800px){
+    .trade-box > div{
+        width: calc(100%/3);
+    }
+    .price{
+        font-size: 1rem;
+    }
+    .price-range{
+        font-size: .7rem;   
+    }
+}   

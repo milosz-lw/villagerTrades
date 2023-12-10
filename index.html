@@ -18,17 +18,22 @@
             <h1>{{ currentProfession }}</h1>
         </div>
         <div id="trades">
-            <div class="trade-box">
+            <div v-if="currentProductIndex!==null" class="trade-box">
                 <div v-for="wantedItem in professions[currentProfessionIndex].products[currentProductIndex].wantedItems" class="item-container">
                     <img :src="'IMG/' + wantedItem.name.replaceAll(' ', '_') + '.png'" class="wanted-item-img">
-                    <p class="price">{{ wantedItem.price }}</p>
+                    <p v-if="wantedItem.price" class="price">{{ wantedItem.price }}</p>
+                    <p v-else class="price price-range">{{ wantedItem.minPrice }} - {{ wantedItem.maxPrice }}</p>
                 </div>
+            </div>
+            <div v-else class="trade-box">
+                <h1>Choose an item you would like to buy!</h1>
             </div>
             <img src="IMG/gui_arrow.png">
             <div class="trade-box">
                 <div v-for="(trade, index) in professions[currentProfessionIndex].products" @click="changeProduct(index)" class="item-container">
                     <img :src="'IMG/' + trade.name.replaceAll(' ', '_') + '.png'" class="wanted-item-img">
                     <p v-if="trade.quantity" class="price">{{ trade.quantity }}</p>
+                    <p v-else class="price">1</p>
                 </div>
             </div>
         </div>
