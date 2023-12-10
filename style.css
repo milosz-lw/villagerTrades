@@ -19,11 +19,13 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 50px;
     width: 80%;
+    aspect-ratio: 20/9;
     margin-top: 100px;
 }
 
-#trades{
+.trades{
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -92,6 +94,23 @@ select:focus{
 
 .item-container{
     position: relative;
+}
+
+input[type=number]{
+    font-size: 3rem;
+    width: 100%;
+    background: none;
+    color: white;
+    border: white solid 3px;
+    padding: 5px;
+}
+
+input[type=number]:focus{
+    outline: none;
+}
+
+input[type=number]:invalid{
+    outline: 5px solid red;
 }
 
 @media screen and (max-width: 800px){
