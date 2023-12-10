@@ -188,16 +188,30 @@ const app = Vue.createApp({
             document.getElementById('product-amount').value = 0
         },
         calculateProductAmount(){
-            let productAmount = Math.floor(document.getElementById('wanted-item-amount').value / this.professions[this.currentProfessionIndex].products[this.currentProductIndex].wantedItems[this.wantedItemIndex].price * this.professions[this.currentProfessionIndex].products[this.currentProductIndex].quantity)
+            let productAmount
+            if(this.professions[this.currentProfessionIndex].products[this.currentProductIndex].wantedItems[this.wantedItemIndex].price){
+                productAmount = Math.floor(document.getElementById('wanted-item-amount').value / this.professions[this.currentProfessionIndex].products[this.currentProductIndex].wantedItems[this.wantedItemIndex].price * this.professions[this.currentProfessionIndex].products[this.currentProductIndex].quantity)
+            } else {
+                productAmount = Math.floor(document.getElementById('wanted-item-amount').value / document.getElementById('actualPrice').value * this.professions[this.currentProfessionIndex].products[this.currentProductIndex].quantity)
+            }
             if (Number.isInteger(productAmount)){
                 document.getElementById('product-amount').value = productAmount
             }
         },
         calculateWantedItemAmount(){
-            let wantedItemAmount = document.getElementById('product-amount').value * this.professions[this.currentProfessionIndex].products[this.currentProductIndex].wantedItems[this.wantedItemIndex].price / this.professions[this.currentProfessionIndex].products[this.currentProductIndex].quantity
+            let wantedItemAmount
+            if(this.professions[this.currentProfessionIndex].products[this.currentProductIndex].wantedItems[this.wantedItemIndex].price){
+                wantedItemAmount = document.getElementById('product-amount').value * this.professions[this.currentProfessionIndex].products[this.currentProductIndex].wantedItems[this.wantedItemIndex].price / this.professions[this.currentProfessionIndex].products[this.currentProductIndex].quantity
+            } else {
+                wantedItemAmount = document.getElementById('product-amount').value * document.getElementById('actualPrice').value / this.professions[this.currentProfessionIndex].products[this.currentProductIndex].quantity
+            }
             if (Number.isInteger(wantedItemAmount)){
                 document.getElementById('wanted-item-amount').value = wantedItemAmount
             }
+        },
+        actualPriceChanged(){
+            document.getElementById('product-amount').value = 0
+            document.getElementById('wanted-item-amount').value = 0
         }
     }
 })

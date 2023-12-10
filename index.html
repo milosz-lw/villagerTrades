@@ -36,6 +36,10 @@
                 </div>
             </div>
         </div>
+        <div v-if="wantedItemIndex!==null && !professions[currentProfessionIndex].products[currentProductIndex].wantedItems[wantedItemIndex].price">
+            <h1>Choose exact price of the item:</h1>
+            <input @change="actualPriceChanged" type="number" name="actualPrice" id="actualPrice" :min="professions[currentProfessionIndex].products[currentProductIndex].wantedItems[wantedItemIndex].minPrice" :max="professions[currentProfessionIndex].products[currentProductIndex].wantedItems[wantedItemIndex].maxPrice">
+        </div>
         <div v-if="wantedItemIndex!==null" class="trades">
             <input type="number" name="wantedItemAmount" value="0" id="wanted-item-amount" min="0" @change="calculateProductAmount">
             <img src="IMG/gui_arrow.png">
