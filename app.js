@@ -84,10 +84,10 @@ const app = Vue.createApp({
                         {name: 'Emerald', price: 7}
                     ]},
                     {name: 'Ocean Explorer Map', quantity: 1, wantedItems:[
-                        {name: 'Emerald', price: 13}
+                        {name: 'Emerald', price: 13, also: 'Compass', alsoPrice: 1}
                     ]},
                     {name: 'Woodland Explorer Map', quantity: 1, wantedItems:[
-                        {name: 'Emerald', price: 14}
+                        {name: 'Emerald', price: 14, also: 'Compass', alsoPrice: 1}
                     ]},
                     {name: 'Item Frame', quantity: 1, wantedItems:[
                         {name: 'Emerald', price: 7}
@@ -158,7 +158,32 @@ const app = Vue.createApp({
                         {name: 'Emerald', price: 4}
                     ]}
                 ]},
-                {name: 'Fisherman'},
+                {name: 'Fisherman', products:[
+                    {name: 'Emerald', quantity: 1, wantedItems:[
+                        {name: 'String', price: 20},
+                        {name: 'Coal', price: 10},
+                        {name: 'Raw Cod', price: 15},
+                        {name: 'Raw Salmon', price: 13},
+                        {name: 'Tropical Fish', price: 6},
+                        {name: 'Pufferfish', price: 4},
+                        {name: 'Boat', price: 1}
+                    ]},
+                    {name: 'Cooked Cod', quantity: 6, wantedItems:[
+                        {name: 'Emerald', price: 1, also: 'Raw Cod', alsoPrice: 6}
+                    ]},
+                    {name: 'Bucket of Cod', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 3}
+                    ]},
+                    {name: 'Cooked Salmon', quantity: 6, wantedItems:[
+                        {name: 'Emerald', price: 1, also: 'Raw Salmon', alsoPrice: 6}
+                    ]},
+                    {name: 'Campfire', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 2}
+                    ]},
+                    {name: 'Enchanted Fishing Rod', quantity: 1, wantedItems:[
+                        {name: 'Emerald', minPrice: 8, maxPrice: 22}
+                    ]}
+                ]},
                 {name: 'Fletcher'},
                 {name: 'Leatherworker'},
                 {name: 'Librarian'},
