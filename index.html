@@ -23,7 +23,8 @@
                     <img :src="'IMG/' + wantedItem.name.replaceAll(' ', '_') + '.png'" class="wanted-item-img">
                     <p v-if="wantedItem.price" class="price">{{ wantedItem.price }}</p>
                     <p v-else class="price price-range">{{ wantedItem.minPrice }} - {{ wantedItem.maxPrice }}</p>
-                    <span v-if="wantedItem.also" class="also-tooltip">Also require {{ wantedItem.alsoPrice }} {{ wantedItem.also }} for each.</span>
+                    <span v-if="wantedItem.also" class="tooltip">Also require {{ wantedItem.alsoPrice }} {{ wantedItem.also }} for each.</span>
+                    <span v-if="!wantedItem.price" class="tooltip">The price of this item may vary. You have to choose the exact price, that your villager is offering you!</span>
                 </div>
             </div>
             <div v-else class="trade-box">

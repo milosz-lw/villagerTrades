@@ -113,18 +113,22 @@ input[type=number]:invalid{
     outline: 5px solid red;
 }
 
-.item-container:hover .also-tooltip{
+.item-container:hover .tooltip{
     visibility: visible;
     opacity: 1;
 }
 
-.also-tooltip{
+.tooltip{
     visibility: hidden;
     opacity: 0;
     position: absolute;
     z-index: 100;
     bottom: 110%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
     transition: .2s;
+    width: 250%;
 }
 
 @media screen and (max-width: 800px){
