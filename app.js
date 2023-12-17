@@ -184,8 +184,62 @@ const app = Vue.createApp({
                         {name: 'Emerald', minPrice: 8, maxPrice: 22}
                     ]}
                 ]},
-                {name: 'Fletcher'},
-                {name: 'Leatherworker'},
+                {name: 'Fletcher', products:[
+                    {name: 'Emerald', quantity: 1, wantedItems:[
+                        {name: 'Stick', price: 32},
+                        {name: 'Flint', price: 26},
+                        {name: 'String', price: 14},
+                        {name: 'Feather', price: 24},
+                        {name: 'Tripwire hook', price: 8}
+                    ]},
+                    {name: 'Arrow', quantity: 16, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Flint', quantity: 10, wantedItems:[
+                        {name: 'Emerald', price: 1, also: 'Gravel', alsoPrice: 10}
+                    ]},
+                    {name: 'Bow', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 2}
+                    ]},
+                    {name: 'Crossbow', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 3}
+                    ]},
+                    {name: 'Enchanted Bow', quantity: 1, wantedItems:[
+                        {name: 'Emerald', minPrice: 7, maxPrice: 21}
+                    ]},
+                    {name: 'Enchanted Crossbow', quantity: 1, wantedItems:[
+                        {name: 'Emerald', minPrice: 8, maxPrice: 22}
+                    ]},
+                    {name: 'Tipped Arrow', quantity: 5, wantedItems:[
+                        {name: 'Emerald', price: 2, also: 'Arrow', alsoPrice: 5}
+                    ]}
+                ]},
+                {name: 'Leatherworker', products:[
+                    {name: 'Emerald', quantity: 1, wantedItems:[
+                        {name: 'Leather', price: 6},
+                        {name: 'Flint', price: 26},
+                        {name: 'Rabbit Hide', price: 9},
+                        {name: 'Scute', price: 4}
+                    ]},
+                    {name: 'Leather Pants', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 3}
+                    ]},
+                    {name: 'Leather Tunic', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 7}
+                    ]},
+                    {name: 'Leather Cap', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 5}
+                    ]},
+                    {name: 'Leather Boots', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 4}
+                    ]},
+                    {name: 'Leather Horse Armor', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 6}
+                    ]},
+                    {name: 'Saddle', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 6}
+                    ]}
+                ]},
                 {name: 'Librarian'},
                 {name: 'Mason'},
                 {name: 'Shepherd'},

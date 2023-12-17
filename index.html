@@ -35,7 +35,7 @@
                 <div v-for="(trade, index) in professions[currentProfessionIndex].products" @click="changeProduct(index)" class="item-container">
                     <img :src="'IMG/' + trade.name.replaceAll(' ', '_') + '.png'" class="wanted-item-img">
                     <p class="price">{{ trade.quantity }}</p>
-                </div>gdaiu
+                </div>
             </div>
         </div>
         <div v-if="wantedItemIndex!==null && !professions[currentProfessionIndex].products[currentProductIndex].wantedItems[wantedItemIndex].price">
