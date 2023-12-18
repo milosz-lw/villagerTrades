@@ -240,10 +240,146 @@ const app = Vue.createApp({
                         {name: 'Emerald', price: 6}
                     ]}
                 ]},
-                {name: 'Librarian'},
-                {name: 'Mason'},
-                {name: 'Shepherd'},
-                {name: 'Toolsmith'},
+                {name: 'Librarian', products:[
+                    {name: 'Emerald', quantity: 1, wantedItems:[
+                        {name: 'Paper', price: 24},
+                        {name: 'Book', price: 4},
+                        {name: 'Ink Sac', price: 5},
+                        {name: 'Book and Quill', price: 2}
+                    ]},
+                    {name: 'Enchanted Book', quantity: 1, wantedItems:[
+                        {name: 'Emerald', minPrice: 5, maxPrice: 64, also: 'Book', alsoPrice: 1}
+                    ]},
+                    {name: 'Bookshelf', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 9}
+                    ]},
+                    {name: 'Lantern', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Glass', quantity: 4, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Clock', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 5}
+                    ]},
+                    {name: 'Compass', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 4}
+                    ]},
+                    {name: 'Name Tag', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 20}
+                    ]}
+                ]},
+                {name: 'Mason', products:[
+                    {name: 'Emerald', quantity: 1, wantedItems:[
+                        {name: 'Clay Ball', price: 10},
+                        {name: 'Stone', price: 20},
+                        {name: 'Granite', price: 16},
+                        {name: 'Andesite', price: 16},
+                        {name: 'Diorite', price: 16},
+                        {name: 'Nether Quartz', price: 12}
+                    ]},
+                    {name: 'Brick', quantity: 10, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Chiseled Stone Bricks', quantity: 4, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Dripstone Block', quantity: 4, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Polished Granite', quantity: 4, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Polished Andesite', quantity: 4, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Polished Diorite', quantity: 4, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Stained Terracotta', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Glazed Terracotta', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Quartz Pillar', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Block of Quartz', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                ]},
+                {name: 'Shepherd', products:[
+                    {name: 'Emerald', quantity: 1, wantedItems:[
+                        {name: 'White Wool', price: 18},
+                        {name: 'Brown Wool', price: 18},
+                        {name: 'Black Wool', price: 18},
+                        {name: 'Gray Wool', price: 18},
+                        {name: 'Dye', price: 12}
+                    ]},
+                    {name: 'Shears', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 2}
+                    ]},
+                    {name: 'Wool', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Carpet', quantity: 4, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Bed', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 3}
+                    ]},
+                    {name: 'Banner', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 3}
+                    ]},
+                    {name: 'Painting', quantity: 3, wantedItems:[
+                        {name: 'Emerald', price: 2}
+                    ]}
+                ]},
+                {name: 'Toolsmith', products:[
+                    {name: 'Emerald', quantity: 1, wantedItems:[
+                        {name: 'Coal', price: 15},
+                        {name: 'Iron Ingot', price: 4},
+                        {name: 'Flint', price: 30},
+                        {name: 'Diamond', price: 1}
+                    ]},
+                    {name: 'Stone Axe', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Stone Shovel', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Stone Pickaxe', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Stone Hoe', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 1}
+                    ]},
+                    {name: 'Bell', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 36}
+                    ]},
+                    {name: 'Enchanted Iron Axe', quantity: 1, wantedItems:[
+                        {name: 'Emerald', minPrice: 6, maxPrice: 20}
+                    ]},
+                    {name: 'Enchanted Iron Shovel', quantity: 1, wantedItems:[
+                        {name: 'Emerald', minPrice: 7, maxPrice: 21}
+                    ]},
+                    {name: 'Enchanted Iron Pickaxe', quantity: 1, wantedItems:[
+                        {name: 'Emerald', minPrice: 8, maxPrice: 22}
+                    ]},
+                    {name: 'Diamond Hoe', quantity: 1, wantedItems:[
+                        {name: 'Emerald', price: 4}
+                    ]},
+                    {name: 'Enchanted Diamond Axe', quantity: 1, wantedItems:[
+                        {name: 'Emerald', minPrice: 17, maxPrice: 31}
+                    ]},
+                    {name: 'Enchanted Diamond Shovel', quantity: 1, wantedItems:[
+                        {name: 'Emerald', minPrice: 10, maxPrice: 24}
+                    ]},
+                    {name: 'Enchanted Diamond Pickaxe', quantity: 1, wantedItems:[
+                        {name: 'Emerald', minPrice: 18, maxPrice: 32}
+                    ]}
+                ]},
                 {name: 'Weaponsmith'}
             ]
         }
