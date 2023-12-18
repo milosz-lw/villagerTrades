@@ -22,7 +22,7 @@ body{
     gap: 50px;
     width: 80%;
     aspect-ratio: 20/9;
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 .trades{
@@ -123,12 +123,20 @@ input[type=number]:invalid{
     opacity: 0;
     position: absolute;
     z-index: 100;
-    bottom: 110%;
-    left: 50%;
     text-align: center;
     transform: translateX(-50%);
     transition: .2s;
     width: 250%;
+}
+
+.tooltip-up{
+    bottom: 110%;
+    left: 50%;
+}
+
+.tooltip-down{
+    top: 110%;
+    left: 50%;
 }
 
 @media screen and (max-width: 800px){

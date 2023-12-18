@@ -23,8 +23,8 @@
                     <img :src="'IMG/' + wantedItem.name.replaceAll(' ', '_') + '.png'" class="wanted-item-img">
                     <p v-if="wantedItem.price" class="price">{{ wantedItem.price }}</p>
                     <p v-else class="price price-range">{{ wantedItem.minPrice }} - {{ wantedItem.maxPrice }}</p>
-                    <span v-if="wantedItem.also" class="tooltip">Also require {{ wantedItem.alsoPrice }} {{ wantedItem.also }} for each.</span>
-                    <span v-if="!wantedItem.price" class="tooltip">The price of this item may vary. You have to choose the exact price, that your villager is offering you!</span>
+                    <span v-if="wantedItem.also" class="tooltip tooltip-down">Also require {{ wantedItem.alsoPrice }} {{ wantedItem.also }} for each.</span>
+                    <span v-if="!wantedItem.price" class="tooltip tooltip-up">The price of this item may vary. You have to choose the exact price, that your villager is offering you!</span>
                 </div>
             </div>
             <div v-else class="trade-box">
@@ -40,12 +40,16 @@
         </div>
         <div v-if="wantedItemIndex!==null && !professions[currentProfessionIndex].products[currentProductIndex].wantedItems[wantedItemIndex].price">
             <h1>Choose exact price of the item:</h1>
-            <input @change="actualPriceChanged" type="number" name="actualPrice" id="actualPrice" :min="professions[currentProfessionIndex].products[currentProductIndex].wantedItems[wantedItemIndex].minPrice" :max="professions[currentProfessionIndex].products[currentProductIndex].wantedItems[wantedItemIndex].maxPrice">
+            <input @input="actualPriceChanged" type="number" name="actualPrice" id="actualPrice" :min="professions[currentProfessionIndex].products[currentProductIndex].wantedItems[wantedItemIndex].minPrice" :max="professions[currentProfessionIndex].products[currentProductIndex].wantedItems[wantedItemIndex].maxPrice">
         </div>
         <div v-if="wantedItemIndex!==null" class="trades">
-            <input type="number" name="wantedItemAmount" value="0" id="wanted-item-amount" min="0" @change="calculateProductAmount">
+            <h1>{{ professions[currentProfessionIndex].products[currentProductIndex].wantedItems[wantedItemIndex].name }}</h1>
+            <h1>{{ professions[currentProfessionIndex].products[currentProductIndex].name }}</h1>
+        </div>
+        <div v-if="wantedItemIndex!==null" class="trades">
+            <input type="number" name="wantedItemAmount" value="0" id="wanted-item-amount" min="0" @input="calculateProductAmount">
             <img src="IMG/gui_arrow.png">
-            <input type="number" name="productAmount" value="0" id="product-amount" min="0" :step="professions[currentProfessionIndex].products[currentProductIndex].quantity" @change="calculateWantedItemAmount">
+            <input type="number" name="productAmount" value="0" id="product-amount" min="0" :step="professions[currentProfessionIndex].products[currentProductIndex].quantity" @input="calculateWantedItemAmount">
         </div>
         <h1 v-else v-if="currentProductIndex!==null">Choose which item do you want to trade for!</h1>
     </div>
