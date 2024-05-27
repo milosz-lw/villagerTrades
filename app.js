@@ -402,7 +402,7 @@ const app = Vue.createApp({
                     {name: 'Enchanted Diamond Sword', quantity: 1, wantedItems:[
                         {name: 'Emerald', minPrice: 13, maxPrice: 27}
                     ]}
-                ]}
+                ]},
                 {name: 'Librarian', products:[
                     {name: 'Emerald', quantity: 1, wantedItems:[
                         {name: 'Paper', price: 24},
